@@ -142,17 +142,3 @@ label {
 #switch4:checked ~ .slider-panel .text:first-child {
   margin-top: -131px;
 }
-
-@media (max-width: 420px) {
-  .slider-panel {
-    flex-direction: column-reverse;
-    margin-top: 12%;
-  }
-  #active {
-    margin-left: 35%;
-    width: 28%;
-  }
-  .slider-text {
-    width: 60%;
-  }
-}
