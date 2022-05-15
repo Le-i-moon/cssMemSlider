@@ -1,0 +1,160 @@
+body {
+  background: rgb(37, 37, 37);
+}
+
+#slider {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+#slides article {
+  width: 20%;
+  float: left;
+}
+
+#slides .image {
+  width: 500%;
+  line-height: 0;
+}
+
+#overflow {
+  width: 100%;
+  overflow: hidden;
+}
+
+article img {
+  width: 100%;
+  border-radius: 4%;
+}
+
+#desktop:checked ~ #slider {
+  max-width: 60rem;
+}
+
+label {
+  cursor: pointer;
+}
+
+.task input {
+  display: none;
+}
+
+#switch1:checked ~ #slides .image {
+  margin-left: 0;
+}
+
+#switch2:checked ~ #slides .image {
+  margin-left: -100%;
+}
+
+#switch3:checked ~ #slides .image {
+  margin-left: -200%;
+}
+
+#switch4:checked ~ #slides .image {
+  margin-left: -300%;
+}
+
+#controls {
+  width: 80%;
+}
+
+#active label {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+}
+
+#active label .btn {
+  border-radius: 50%;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: grey;
+}
+
+#active {
+  text-align: right;
+  width: 20%;
+}
+
+#active label:hover .btn {
+  background: rgb(0, 87, 184);
+}
+
+#active label:active .btn {
+  background: rgb(153, 153, 204);
+}
+
+#switch1:checked ~ div #active label:nth-child(1) .btn {
+  background: rgb(255, 255, 0);
+}
+#switch2:checked ~ div #active label:nth-child(2) .btn {
+  background: rgb(255, 255, 0);
+}
+#switch3:checked ~ div #active label:nth-child(3) .btn {
+  background: rgb(255, 255, 0);
+}
+#switch4:checked ~ div #active label:nth-child(4) .btn {
+  background: rgb(255, 255, 0);
+}
+
+#slides .image {
+  transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.slider-panel {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7%;
+}
+
+.text {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 20em;
+  height: 4em;
+  font-size: 118%;
+  transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+  color: rgb(255, 0, 0);
+  background: rgb(255, 255, 255);
+}
+
+.slider-text {
+  width: 20em;
+  height: 4em;
+  overflow: hidden;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#switch1:checked ~ .slider-panel .text:first-child {
+  margin-top: 0;
+}
+
+#switch2:checked ~ .slider-panel .text:first-child {
+  margin-top: -4rem;
+}
+
+#switch3:checked ~ .slider-panel .text:first-child {
+  margin-top: -9rem;
+}
+
+#switch4:checked ~ .slider-panel .text:first-child {
+  margin-top: -18rem;
+}
+
+@media (max-width: 1030px) {
+  .slider-panel {
+    flex-direction: column-reverse;
+  }
+  #active {
+    margin: 0 auto;
+    width: 9rem;
+  }
+  .slider-text {
+    width: 60%;
+  }
+}
